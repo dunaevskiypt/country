@@ -25,15 +25,14 @@ const Input = styled.input.attrs({
   margin-left: 2rem;
   border: none;
   outline: none;
-  background-color: var(--colors-bg);
   color: var(--color-text);
 `;
 
 function Search({ search, setSearch }) {
   return (
     <InputContainer>
-      <IoSearch />
-      <Input value={search} onChange={() => setSearch(e.targer.value)} />
+      <IoSearch/>
+      <Input onChange={(e) => setSearch(e.target.value)} value={search} />
     </InputContainer>
   );
 }
